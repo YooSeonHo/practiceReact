@@ -8,10 +8,10 @@ import Home from './routes/Home'
 
 function App(){
   return(
-    <Router>
+    <Router basename={process.env.PUBLIC_URL} >
       <Routes>
         <Route path='/movie/:id' element={<Detail />}/>
-        <Route path='/' element={<Home />}/>
+        <Route path="/" element={<Home />}/>
       </Routes>
     </Router>
   );
